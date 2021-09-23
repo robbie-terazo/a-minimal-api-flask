@@ -26,3 +26,6 @@ python todo.py
 - Flask-RESTful understands multiple kinds of return values from view methods. Similar to Flask, you can return any iterable and it will be converted into a response, including raw Flask response objects.
 - Notice how you can set the response code and response headers using multiple return values.
 - reqparse gives Flask-RESTful built-in support for request data validation using a library similar to [argparse](http://docs.python.org/dev/library/argparse.html).
+
+## Intermediate Usage
+https://flask-restful.readthedocs.io/en/latest/intermediate-usage.html
