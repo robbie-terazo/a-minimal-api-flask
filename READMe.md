@@ -1,4 +1,4 @@
-# A Minimal API (Flask)
+# A Minimal API (Flask and Flask-RESTful)
 
 https://flask-restful.readthedocs.io/en/latest/quickstart.html
 
