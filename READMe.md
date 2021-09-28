@@ -26,3 +26,17 @@ python todo.py
 - Flask-RESTful understands multiple kinds of return values from view methods. Similar to Flask, you can return any iterable and it will be converted into a response, including raw Flask response objects.
 - Notice how you can set the response code and response headers using multiple return values.
 - reqparse gives Flask-RESTful built-in support for request data validation using a library similar to [argparse](http://docs.python.org/dev/library/argparse.html).
+
+## Blueprint
+
+```python
+api_bp = Blueprint('api', __name__)
+api = Api(api_bp)
+```
+- Create the api with the blueprint
+```python
+app.register_blueprint(api_bp, url_prefix="/v1")
+```
+- then register the blueprint with the app
+- you can set url prefix here, such as versioning
+- note that this is done after adding the resources

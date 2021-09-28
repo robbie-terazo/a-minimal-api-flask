@@ -1,8 +1,9 @@
-from flask import Flask
+from flask import Flask, Blueprint
 from flask_restful import reqparse, abort, Api, Resource
 
 app = Flask(__name__)
-api = Api(app)
+api_bp = Blueprint('api', __name__)
+api = Api(api_bp)
 
 TODOS = {
     'todo1': {'task': 'build an API'},
@@ -56,6 +57,8 @@ class TodoList(Resource):
 ##
 api.add_resource(TodoList, '/todos')
 api.add_resource(Todo, '/todos/<todo_id>')
+
+app.register_blueprint(api_bp, url_prefix="/v1")
 
 
 if __name__ == '__main__':
